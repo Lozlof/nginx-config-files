@@ -21,10 +21,26 @@ TLS 1.3 - applied
 Automatic HTTPS Rewrites - applied  
 Certificate Transparency Monitoring - applied  
 Disable Universal SSL - not applied  
-#### This cert is Cloudfalare Origin Certificates 
-ssl_client_certificate /your/path/to/namecloudflare-ca.pem;   
-**Setting**
-Authenticated Origin Pulls - applied
-If you do not have this setting, remove this line:
-ssl_verify_client on;
+#### This cert is Cloudfalare Origin Certificates   
+ssl_client_certificate /your/path/to/namecloudflare-ca.pem;       
+**Setting**    
+Authenticated Origin Pulls - applied  
+If you do not have this setting, remove this line:  
+ssl_verify_client on;  
+### One note about SSL/TLS   
+Traffic flow: CloudFlare -> Router -> Nginx -> Proxy Pass to Internal Service    
+It does not matter if your internal service is HTTP or HTTPS.  
+proxy_ssl_verify off; - It does not even check.  
+The the SSL/TLS negotiation and encryption is happening between Nginx and Cloudflare, not your internal service and CloudFlare.  
+## general.purpose.com.conf
+This is my go-to copy and paste configuration.  
+The only lines you will have to change for each service is:
+- server_name
+- proxy_pass (Can pass to both HTTP and HTTPS)
+- And if you change the domain you will have to change the Edge Certs as well.
+I personally use this configuration for:  
+- ProxmoxVE Web Interface
+- Hosting Wiki.js
+- PfSense Web Interface
+- OpenVPN Access Server Web Interface
 
