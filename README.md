@@ -21,6 +21,10 @@ TLS 1.3 - applied
 Automatic HTTPS Rewrites - applied  
 Certificate Transparency Monitoring - applied  
 Disable Universal SSL - not applied  
-#### This cert is Cloudfalare Origin Certificates  
-
+#### This cert is Cloudfalare Origin Certificates 
+ssl_client_certificate /your/path/to/namecloudflare-ca.pem;   
+**Setting**
+Authenticated Origin Pulls - applied
+If you do not have this setting, remove this line:
+ssl_verify_client on;
 
