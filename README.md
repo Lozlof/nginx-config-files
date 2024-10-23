@@ -7,5 +7,20 @@ Config files for: Proxmox, Wiki.js, Hedgedoc, PfSense, OpenVPN Access Server, Vi
 **These configs work for me, they might work for you.**
 #### I am open to suggestions an how to improve them!  
 Thank you. 
+## SSL/TLS    
+#### This cert/key combo is Cloudflare Edge Certificates     
+ssl_certificate /your/path/to/namecloudflare-tls.pem;                                 
+ssl_certificate_key /your/path/to/namecloudflare-tls.key;  
+**Settings:**  
+Total TLS - not applied  
+Always Use HTTPS - applied  
+HTTP Strict Transport Security (HSTS) - Status: On - Max-Age: 6 months (Recommended) - Include subdomains: On - Preload: On  
+Minimum TLS Version - TLS 1.0 (default)  
+Opportunistic Encryption - applied  
+TLS 1.3 - applied  
+Automatic HTTPS Rewrites - applied  
+Certificate Transparency Monitoring - applied  
+Disable Universal SSL - not applied  
+#### This cert is Cloudfalare Origin Certificates  
 
 
