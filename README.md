@@ -38,7 +38,7 @@ The only lines you will have to change for each service is:
 - server_name
 - proxy_pass (Can pass to both HTTP and HTTPS)
 - And if you change the domain you will have to change the Edge Certs as well.      
-I personally use this configuration for:     
+#### I personally use this configuration for:     
 - ProxmoxVE Web Interface
 - Hosting Wiki.js
 - PfSense Web Interface
