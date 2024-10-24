@@ -49,4 +49,7 @@ The only difference is these two lines:
 **proxy_set_header Connection upgrade;**       
 **proxy_set_header Accept-Encoding gzip;**       
 If you do not add these lines, you will be able to access your VScode web page, however you will get the error:   
-"An unexpected error occurred that requires a reload of this page. The workbench failed to connect to the server (Error: WebSocket close with status code 1006)"
+"An unexpected error occurred that requires a reload of this page. The workbench failed to connect to the server (Error: WebSocket close with status code 1006)"   
+## hedgedoc.domain.com.conf     
+The main difference between this config file and the general purpose config file is:     
+location /socket.io/ block   
