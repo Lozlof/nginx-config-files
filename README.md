@@ -27,7 +27,7 @@ ssl_client_certificate /your/path/to/namecloudflare-ca.pem;
 Authenticated Origin Pulls - applied  
 If you do not have this setting, remove this line:  
 ssl_verify_client on;  
-### One note about SSL/TLS   
+#### One note about SSL/TLS   
 Traffic flow: CloudFlare -> Router -> Nginx -> Proxy Pass to Internal Service    
 It does not matter if your internal service is HTTP or HTTPS.  
 proxy_ssl_verify off; - It does not even check.  
