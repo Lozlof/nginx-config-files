@@ -46,7 +46,7 @@ I personally use this configuration for:
 ## visualstudio.codeserver.com.conf   
 How is this configuration any different than general.purpose.com.conf?   
 The only difference is these two lines:    
-proxy_set_header Connection upgrade;       
-proxy_set_header Accept-Encoding gzip;       
+**proxy_set_header Connection upgrade;**       
+**proxy_set_header Accept-Encoding gzip;**       
 If you do not add these lines, you will be able to access your VScode web page, however you will get the error:   
 "An unexpected error occurred that requires a reload of this page. The workbench failed to connect to the server (Error: WebSocket close with status code 1006)"
