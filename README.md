@@ -33,12 +33,12 @@ It does not matter if your internal service is HTTP or HTTPS.
 proxy_ssl_verify off; - It does not even check.  
 The the SSL/TLS negotiation and encryption is happening between Nginx and Cloudflare, not your internal service and CloudFlare.  
 ## general.purpose.com.conf
-This is my go-to copy and paste configuration.  
+This is my go-to copy and paste configuration.      
 The only lines you will have to change for each service is:
 - server_name
 - proxy_pass (Can pass to both HTTP and HTTPS)
-- And if you change the domain you will have to change the Edge Certs as well.
-I personally use this configuration for:  
+- And if you change the domain you will have to change the Edge Certs as well.      
+I personally use this configuration for:     
 - ProxmoxVE Web Interface
 - Hosting Wiki.js
 - PfSense Web Interface
