@@ -53,3 +53,8 @@ If you do not add these lines, you will be able to access your VScode web page, 
 ## hedgedoc.domain.com.conf     
 The main difference between this config file and the general purpose config file is:     
 location /socket.io/ block   
+## Firewall   
+Not really necessary because I have like three other firewalls that traffic will have to pass through before it hits the Nginx rules. But more safety for minimal effort seems like a good choice to me.  
+The rules are:   
+Allow CloudFlare IP's  
+Deny everything else
