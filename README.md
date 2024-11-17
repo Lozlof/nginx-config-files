@@ -58,4 +58,4 @@ Not really necessary because I have like three other firewalls that traffic will
 The rules are:   
 Allow CloudFlare IP's  
 Deny everything else
-## Contact: Lozlofcyber@gmail.com    
+## Contact: lozlofcyber@gmail.com    
